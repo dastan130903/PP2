@@ -222,13 +222,3 @@ def average_imdb_by_category(mvs, category):
     sub = movies_by_category(mvs, category)
     return average_imdb(sub)
 
-
-# тесты
-if __name__ == "__main__":
-    print("7) 100g ->", grams_to_ounces(100))
-    print("8) 212F ->", f_to_c(212))
-    print("9) heads=35 legs=94 ->", solve(35, 94))
-    print("13) has_33:", has_33([1,3,3]))
-    print("14) spy_game:", spy_game([1,0,0,7]))
-    print("17) palindrome:", is_palindrome("madam"))
-    print("23) avg imdb:", average_imdb(movies))
