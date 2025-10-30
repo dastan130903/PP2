@@ -4,11 +4,12 @@ pygame.init()
 WIDTH, HEIGHT =800,600
 screen =pygame.display.set_mode((WIDTH, HEIGHT))
 
-pygame.display.set_caption("Red Ball by Dastan")
+pygame.display.set_caption("Red Ball by Dast")
 
 WHITE =(255,255, 255)
 RED =(255, 30,30)
-BG_COLOR =(230,230,255)   # голубоватый
+
+BG_COLOR =(230,230,255)   # голубоваn
 
 
 RADIUS =25
@@ -23,13 +24,13 @@ while running:
             running =False
     keys = pygame.key.get_pressed()
 
-    if keys[pygame.K_UP] and y - RADIUS - STEP>= 0:
+    if keys[pygame.K_UP] and y - RADIUS - STEP>=0:
         y -= STEP
     elif keys[pygame.K_DOWN] and y +RADIUS +STEP <= HEIGHT:
         y += STEP
     elif keys[pygame.K_LEFT] and x -RADIUS -STEP >= 0:
         x -= STEP
-    elif keys[pygame.K_RIGHT] and x +RADIUS +STEP <= WIDTH:
+    elif keys[pygame.K_RIGHT] and x +RADIUS +STEP <=WIDTH:
         x += STEP
 
 
@@ -38,9 +39,8 @@ while running:
 
     font = pygame.font.SysFont('Arial', 20)
     text = font.render('Red Ball by Dastan',True,(60,60,60))
-    screen.blit(text, (10, 10))
-
+    
+    screen.blit(text,(10,10))
     pygame.display.flip()
     clock.tick(30)
-
 pygame.quit()
